@@ -1,3 +1,5 @@
+
+
 <?php /**
  * Template Name: Home Page with excerpts 
  * @package WordPress
@@ -9,38 +11,80 @@
 
 get_header(); ?>
 
+
+
 <div style="height:128px" aria-hidden="true" class="wp-block-spacer"></div>
 
 <main>
+<!-- BUTTON BACK TO TOP -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+  
   <?php 
     // the query
     $the_query = new WP_Query( array(
-      'category_name' => 'condolences',
-        'posts_per_page' => 3,
+      'category_name' => 'condolences'
     )); 
   ?>
 
+
+
+  <!-- LOOPING FOR EACH PUBLISHED POST -->
   <?php if ( $the_query->have_posts() ) : ?>
+
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-    
-      <blockquote>
-        <?php the_content(); ?>
-      </blockquote>
-      <cite>
-        <?php get_the_author_meta( 'display_name', $author_id );  ?>
-      </cite>
+      <div class="tenant">
+        <!-- THE EXCERPT -->
+        <blockquote class='excerpt'>
+            <span style="color: black; font-size: 1.5rem;"><?php the_title(); ?></span>
+            <p>
+              <?php $my_post_meta = get_post_meta($post->ID, 'fpsm_author_name', true); ?>
+              <small><i>par <?php echo ($my_post_meta); ?></i></small>
+            </p>
+            <?php the_excerpt(); ?>
+            <a href="" class="read">...lire plus</a><br>
+            
+            <br>
+            
+        </blockquote>
+  
+        <!-- THE WHOLE POST -->
+        <blockquote class='content'>
+
+          <span style="color: black; font-size: 1.5rem;"><?php the_title(); ?></span>
+          <p>
+              <?php $my_post_meta = get_post_meta($post->ID, 'fpsm_author_name', true); ?>
+              <small><i>par <?php echo ($my_post_meta); ?></i></small>
+            </p>
+          <?php the_content(); ?>
+          <?php
+            if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+            the_post_thumbnail( 'full' );
+            }
+          ?>
+          <a href="" class="read-less">...lire moins</a>
+        </blockquote>
+      </div>
+
+      <!-- SHOW THE AUTHOR NAME -->
+      <p>
+        <?php echo get_post_meta('fpsm_author_name'); ?>
+      </p>
 
       <div style="height:38px" aria-hidden="true" class="wp-block-spacer"></div>
-
+      
     <?php endwhile; ?>
-    <?php wp_reset_postdata(); ?>
+    
+   
+
+    
 
   <?php else : ?>
     <p><?php __('No News'); ?></p>
   <?php endif; ?>
 
-  <?php the_content(); ?>
+  
+
 
 </main>
 

@@ -26,6 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'condoleances' ); ?></a>
 
 	<header id="masthead" class="site-header">
+		
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -35,18 +36,19 @@
 				<?php
 			else :
 				?>
-				<h2 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
+				<h2 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>   ,  </a><span style="font-size: 0.8rem;" class="mobile-hide"> un site pour partager nos souvenirs en commun.</span>		 </h2> 
 				<?php
-			endif;
-			$condoleances_description = get_bloginfo( 'description', 'display' );
-			if ( $condoleances_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $condoleances_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+				endif; ?>
+				
+			</div>
+			<div class="open-button-mobile" id="formButton2" onclick="myFunction()">Laisser un message</div>
+			<!-- .site-branding -->
+			<!-- FORM BUTTON -->
+			<div><button class="open-button" id="formButton" onclick="myFunction()">Laisser un message</button></div>
 
 		<nav id="site-navigation" class="main-navigation">
 			
+			<!-- GETTING THE MENU -->
 			<?php
 			wp_nav_menu(
 				array(
@@ -55,5 +57,29 @@
 				)
 			);
 			?>
+
+			
+
+			<!-- FORM -->
+			<div class="condolence-form" id="myForm">
+				
+					<div class="form-popup">
+						
+						<div>
+							<div style="height:140px" aria-hidden="true" class="wp-block-spacer"></div>
+							<div class="close" onclick="myFunction()" ><p>Fermer cette fenêtre</p></div>
+							<?php echo do_shortcode("[fpsm alias=condoleances]"); ?>
+							
+						</div>
+						
+
+					</div>
+
+				</div>
+			</div>
+			<div class="jumbotron"></div>
 		</nav><!-- #site-navigation -->
+
+		
+
 	</header><!-- #masthead -->

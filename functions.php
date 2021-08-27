@@ -7,6 +7,40 @@
  * @package condoleances
  */
 
+
+function wpa_enqueue_scripts1() {
+	wp_enqueue_script( 'wpa-main-js', get_theme_file_uri( 'js/form-popup.js' ));
+	
+}
+function wpa_enqueue_scripts2() {
+	wp_enqueue_script( 'wpa-readmore-js', get_theme_file_uri( 'js/readmore.js' ));
+}
+function wpa_enqueue_scripts3() {
+	wp_enqueue_script( 'wpa-jquery', get_theme_file_uri( 'js/jquery-3.6.0.min.js', array('jquery'), '1.0.1', true ));
+}
+function wpa_enqueue_scripts4() {
+	wp_enqueue_script( 'wpa-jquery', get_theme_file_uri( 'js/backtotop.js' ));
+}
+
+add_action( 'wp_enqueue_scripts', 'wpa_enqueue_scripts3', 100 );
+add_action( 'wp_enqueue_scripts', 'wpa_enqueue_scripts1', 100 );
+add_action( 'wp_enqueue_scripts', 'wpa_enqueue_scripts2', 100 );
+add_action( 'wp_enqueue_scripts', 'wpa_enqueue_scripts4', 100 );
+
+
+
+
+
+
+
+
+
+
+
+
+// BASIC FUNCTIONS
+
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
