@@ -7,6 +7,15 @@
  * @package condoleances
  */
 
+function theme_gsap_script1() {
+
+	wp_enqueue_script('gsap', "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js");
+	wp_enqueue_script('herbefolle_gsap_ScrollTrigger',    "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js");
+  wp_enqueue_script('herbefolle_gsap_TweenMax',         "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js");
+	
+
+}
+
 
 function wpa_enqueue_scripts1() {
 	wp_enqueue_script( 'wpa-main-js', get_theme_file_uri( 'js/form-popup.js' ));
@@ -19,13 +28,21 @@ function wpa_enqueue_scripts3() {
 	wp_enqueue_script( 'wpa-jquery', get_theme_file_uri( 'js/jquery-3.6.0.min.js', array('jquery'), '1.0.1', true ));
 }
 function wpa_enqueue_scripts4() {
-	wp_enqueue_script( 'wpa-jquery', get_theme_file_uri( 'js/backtotop.js' ));
+	wp_enqueue_script('backtotop', get_template_directory_uri() . "/js/backtotop.js", array(), '' , true);
 }
 
-add_action( 'wp_enqueue_scripts', 'wpa_enqueue_scripts3', 100 );
-add_action( 'wp_enqueue_scripts', 'wpa_enqueue_scripts1', 100 );
-add_action( 'wp_enqueue_scripts', 'wpa_enqueue_scripts2', 100 );
-add_action( 'wp_enqueue_scripts', 'wpa_enqueue_scripts4', 100 );
+
+function wpa_enqueue_scripts_anim() {
+	wp_enqueue_script( 'wpa-anim', get_theme_file_uri( 'js/anim.js' ));
+}
+
+add_action( 'wp_enqueue_scripts', 'theme_gsap_script1');
+add_action( 'wp_enqueue_scripts', 'wpa_enqueue_scripts3');
+add_action( 'wp_enqueue_scripts', 'wpa_enqueue_scripts1');
+add_action( 'wp_enqueue_scripts', 'wpa_enqueue_scripts2');
+add_action( 'wp_enqueue_scripts', 'wpa_enqueue_scripts4');
+add_action( 'wp_enqueue_scripts', 'wpa_enqueue_scripts_anim');
+
 
 
 

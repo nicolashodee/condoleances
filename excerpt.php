@@ -13,12 +13,13 @@ get_header(); ?>
 
 
 
-<div style="height:128px" aria-hidden="true" class="wp-block-spacer"></div>
-
+<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+<div style="font-size: 1rem; margin: 0 15%;"><?php the_content(); ?></div>
 <main>
 <!-- BUTTON BACK TO TOP -->
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+<button onclick="topFunction()" id="myBtn" title="Go to top">&#9650;</button> 
   
+  <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
   <?php 
     // the query
     $the_query = new WP_Query( array(
@@ -35,8 +36,8 @@ get_header(); ?>
 
       <div class="tenant">
         <!-- THE EXCERPT -->
-        <blockquote class='excerpt'>
-            <span style="color: black; font-size: 1.5rem;"><?php the_title(); ?></span>
+        <blockquote class='excerpt anim'>
+            <span style="color: #3f3f5a; font-size: 1.5rem; font-weight: bold;"><?php the_title(); ?></span>
             <p>
               <?php $my_post_meta = get_post_meta($post->ID, 'fpsm_author_name', true); ?>
               <small><i>par <?php echo ($my_post_meta); ?></i></small>
