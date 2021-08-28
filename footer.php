@@ -13,7 +13,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			Site bénévole par <a href="http://www.nicolashodee.com" target="blank" style="color: white !important;">www.nicolashodee.com</a>
+			Site bénévole par <a href="http://www.nicolashodee.com" target="blank" style="color: black !important;">www.nicolashodee.com</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

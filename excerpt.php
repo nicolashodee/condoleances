@@ -37,7 +37,7 @@ get_header(); ?>
       <div class="tenant">
         <!-- THE EXCERPT -->
         <blockquote class='excerpt anim'>
-            <span style="color: #3f3f5a; font-size: 1.5rem; font-weight: bold;"><?php the_title(); ?></span>
+            <span style="color: #7a341d; font-size: 1.5rem; font-weight: bold;"><?php the_title(); ?></span>
             <p>
               <?php $my_post_meta = get_post_meta($post->ID, 'fpsm_author_name', true); ?>
               <small><i>par <?php echo ($my_post_meta); ?></i></small>
@@ -52,7 +52,7 @@ get_header(); ?>
         <!-- THE WHOLE POST -->
         <blockquote class='content'>
 
-          <span style="color: black; font-size: 1.5rem;"><?php the_title(); ?></span>
+          <span style="color: #7a341d; font-size: 1.5rem; font-weight: bold;"><?php the_title(); ?></span>
           <p>
               <?php $my_post_meta = get_post_meta($post->ID, 'fpsm_author_name', true); ?>
               <small><i>par <?php echo ($my_post_meta); ?></i></small>
