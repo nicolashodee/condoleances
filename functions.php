@@ -26,11 +26,11 @@ function customContent() {
         <div id="main_content" class="notice_content">
 
         <div class="logo">
-            <a href="https:://www.nicolashodee.com" target="_blank"><img src="http://leopold.fakambi.net/wp-content/uploads/2021/09/logo_carre_150px_noir.jpg" alt="nhodee-logo" class="hlogo" /></a>
+            <a href="https:://www.nicolashodee.com"><img src="http://leopold.fakambi.net/wp-content/uploads/2021/09/logo_carre_150px_noir.jpg" alt="nhodee-logo" class="hlogo" /></a>
         </div>
 
         <div>
-            <p><strong>Ce site a été réalisé bénévolement.</strong><br> Merci de me <a href="https://www.nicolashodee.com/contact/" target="_blank">demander un devis</a> si vous souhaitez que je le maintienne ou le fasse évoluer par la suite.  </p>
+            <p><strong>Ce site a été réalisé bénévolement.</strong><br> Merci de me <a href="https://www.nicolashodee.com/contact/" target="_blank">demander un devis</a> si vous souhaitez que je maintienne ou fasse évoluer celui-ci par la suite.</p>
         </div>
 
             

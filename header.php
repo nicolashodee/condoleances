@@ -67,7 +67,7 @@
 						
 						<div>
 							<div style="height:140px" aria-hidden="true" class="wp-block-spacer"></div>
-							<div class="close" onclick="myFunction()" ><p>Fermer cette fenêtre</p></div>
+							<div class="close" onclick="myFunction()" >Fermer cette fenêtre</div>
 							<?php echo do_shortcode("[fpsm alias=condoleances]"); ?>
 							
 						</div>

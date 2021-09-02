@@ -1,4 +1,3 @@
-console.log("let's go back to top nowwwww");
 //Get the button:
 mybutton = document.getElementById("myBtn");
 

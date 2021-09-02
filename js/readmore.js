@@ -1,6 +1,3 @@
-
-console.log("hellllllo you"); 
-
 $(function () {
   $('.content').hide();
   $('a.read').click(function () {
