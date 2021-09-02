@@ -36,7 +36,7 @@
 				<?php
 			else :
 				?>
-				<h2 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>,  </a><span style="font-size: 0.8rem;" class="mobile-hide"> un site pour partager nos souvenirs en commun.</span>		 </h2> 
+				<h2 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>  </a><span style="font-size: 0.8rem;" class="mobile-hide"> un site pour partager nos souvenirs en commun.</span>		 </h2> 
 				<?php
 				endif; ?>
 				

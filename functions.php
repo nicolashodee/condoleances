@@ -7,6 +7,51 @@
  * @package condoleances
  */
 
+// ADDING A BANNER TO THE DASHBOARD
+function customContent() {
+  echo '
+
+	<style type="text/css">
+    
+        #main_content a { color: lightgrey;  text-decoration: none; }
+        .notice_content { display:flex; flex-direction: row; justify-content:flex-start; align-items: flex-start; }
+        #main_content { padding: 10px; z-index: 10;}
+        #main_content p { color: white; font-weight: bold; text-align: left; margin-left: 15px;}
+        .hlogo {width: 50px;}
+        .notice {
+            background-color: #3a2923;
+        }
+    </style>
+    <div class="notice is-dismissible">
+        <div id="main_content" class="notice_content">
+
+        <div class="logo">
+            <a href="https:://www.nicolashodee.com" target="_blank"><img src="http://leopold.fakambi.net/wp-content/uploads/2021/09/logo_carre_150px_noir.jpg" alt="nhodee-logo" class="hlogo" /></a>
+        </div>
+
+        <div>
+            <p><strong>Ce site a été réalisé bénévolement.</strong><br> Merci de me <a href="https://www.nicolashodee.com/contact/" target="_blank">demander un devis</a> si vous souhaitez que je le maintienne ou le fasse évoluer par la suite.  </p>
+        </div>
+
+            
+        </div>
+      
+        </div>
+    </div>
+	
+	
+	';
+}
+
+/* add widget */
+function add_customDashboardWidget() {
+  wp_add_dashboard_widget('wp_dashboard_widget', 'Custom Content', 'customContent');
+}
+
+/* add action */
+add_action('wp_dashboard_setup', 'add_customDashboardWidget' );
+
+
 function theme_gsap_script1() {
 
 	wp_enqueue_script('gsap', "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js");

@@ -1,9 +1,9 @@
 /*!
-Theme Name: condoleances
+Theme Name: Léopold Fakambi
 Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
-Description: Description
+Author: Nicolas HODEE
+Author URI: https://www.nicolashodee.com/
+Description: Custom theme coded by Nicolas Hodée, based on the starter theme Underscores. 
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -1038,6 +1038,9 @@ cite {
 }
 
 .site-branding {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
 	position: fixed;
 	height: 70px; 
 	top: 0;
@@ -1093,13 +1096,13 @@ cite {
 	display: flex;
 	font-family: 'Poppins', sans-serif;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: flex-start;
 	position: fixed;
 	bottom: 0;
 	text-align: left;
 	font-size: 0.5rem;
-	height: 20px;
+	height: 25px;
 	background-color: #E7D48A;
 	color: black;
 	width: 100%;
