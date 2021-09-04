@@ -1,4 +1,4 @@
-![MOCKUP](./readme_images/mockup_crop_1700px.jpg)
+![MOCKUP](./readme_images/crop_mockup_1500px.jpg)
 # 🏮  LEOPOLD FAKAMBI  🏮  
 ## A TRIBUTE WEBSITE USING A CUSTOM THEME. 
 
